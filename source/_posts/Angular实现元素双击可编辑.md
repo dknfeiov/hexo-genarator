@@ -13,7 +13,7 @@ tags: Angular
 ```
 
 ##### 效果
-![](images/editable.gif)  
+![](https://dknfeiov.github.io/images/files/editable.gif)  
 
 
 #### 实现步骤
