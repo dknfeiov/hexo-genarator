@@ -1,7 +1,7 @@
 ---
 title: Angular实现元素双击可编辑
 date: 2018-02-28 11:28:58
-tags: Angular
+tags: Angular , React
 ---
 
 #### 实现目标
