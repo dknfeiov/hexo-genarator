@@ -25,9 +25,13 @@ tags: Angular
 ### React
 > 组件化、函数式编程、虚拟dom
 
-1. React 维护一颗组件树， 数据通过props从上往下单向流动，组件内部通过state保存状态，通过setState改变state的值，默认当props或state发生变化，组件重新渲染，PureReactComponent组件默认判断新旧props,state（浅引用判断）值，如果没有变化，不重新渲染，但过多diff操作同样消耗性能， 普通Component 可通过使用 shouldComponentUpdate生命周期钩子，返回true|false 来决定是否重新渲染组件，二者结合 immutable 对象性能更佳
+1. React 维护一颗组件树， 数据通过props从上往下单向流动，组件内部通过state保存状态，通过setState改变state的值，默认当props或state发生变化，组件重新渲染，PureReactComponent组件默认判断新旧props,state（浅引用判断）值，如果没有变化，不重新渲染，但过多diff操作同样消耗性能， 普通Component 可通过使用 shouldComponentUpdate生命周期钩子，返回true|false 来决定是否重新渲染组件，结合 immutable 对象可以更好的对性能进行优化
 
-2. React 组件有3种创建方式（函数式、ES6、ES5），函数式无状态组件拥有更好的性能，但如果需要用到state 、组件生命周期，则需要使用ES6方式, 通过ES5语法创建现已不推荐使用
+2. React 组件有3种创建方式（函数式、ES6、ES5），函数式无状态组件拥有更好的性能,每次重新渲染相当于重新执行一次函数,但如果需要用到state 、组件生命周期，则需要使用ES6方式, 通过ES5语法创建现已不推荐使用, 
+
+3. jsx-函数式编程，可以用js来构建视图，可以使用临时变量、自带的流程控制、js当前作用域等，相比较于Angular的模板（Template）更为灵活
+
+4. react利用key来识别组件，它是一种身份标识标识，当key发生变化，销毁原有组件，创建新组件，key没有变化，数据变化，重新渲染原组件
 
 
 
@@ -62,7 +66,7 @@ Angular :
         <div seletor>
 ```
 
+8. Angular 相对React ，概念更多，给出了一个更复杂的解决方案，但同时，Angular提供了React没有的模块化、提供成体系的前端技术解决方案、引入typescript进行类型定义，对于大型协作项目的团队式开发和长期维护，是一个不错的选择
 
 
-
-<!-- > - Angular 概念更多，有时候有很大的理解负担  -->
+<!-- angular 每个component ， service， directive 都有自己的一个标识，很容易通过全局查找，知道在何处被使用 -->
