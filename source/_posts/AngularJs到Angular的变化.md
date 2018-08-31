@@ -6,9 +6,9 @@ tags: Angular, AngularJs
 
 >以下只是个人使用过程中的的一些感受,具体二者之间的差别参考 [官方文档](https://angular.cn/guide/ajs-quick-reference) 
 
-1. Typescript es6超集 , 支持 import export , 不需额外引入模块加载器
+1. Typescript es6超集 , 支持 import export ,不需额外引入模块加载器
 
-2. 将组件和指令二者剥离开来，前者组成页面，后者分为结构性指令和功能性指令，不再支持replace等
+2. 将组件和指令二者剥离开来，前者组成页面，后者分为结构性指令和功能性指令, 不再支持replace等
 
 3. 移除controller, $scope等
 
