@@ -59,3 +59,17 @@ template => render函数
 
 
 EventBus 非父子组件间通信
+
+
+
+slot
+
+
+
+
+
+
+
+
+1. 组件是可复用的Vue实例， Vue.component全局注册组件，可以通过普通的JS对象来定义非全局组件
+

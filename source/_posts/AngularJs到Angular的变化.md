@@ -4,9 +4,15 @@ date: 2017-10-28 11:28:58
 tags: Angular, AngularJs
 ---
 
->以下只是个人使用过程中的的一些感受,具体二者之间的差别参考 [官方文档](https://angular.cn/guide/ajs-quick-reference) 
+### 概述
+    
+    关于AngularJs、Angular 一脉相承的思路与不同之处
 
-1. Typescript es6超集 , 支持 import export ,不需额外引入模块加载器
+    以下只是个人使用过程中的的一些感受,具体二者之间的差别参考 [官方文档](https://angular.cn/guide/ajs-quick-reference) 
+
+
+### 细节
+1. 引入脚手架，提供Typescript es6超集 , 支持 import export ,不需额外引入模块加载器
 
 2. 将组件和指令二者剥离开来，前者组成页面，后者分为结构性指令和功能性指令, 不再支持replace等
 

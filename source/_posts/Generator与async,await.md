@@ -11,6 +11,9 @@ tags: javascript 、es6
     
     yield 关键字用来暂停和恢复一个生成器函数 
 
+
+#### 语法：
+
 1. yield关键字使生成器函数执行暂停，yield关键字后面的表达式的值返回给生成器的调用者。它可以被认为是一个基于生成器的版本的return关键字
 
 2. yield关键字实际返回一个IteratorResult对象，它有两个属性，value和done。value属性是对yield表达式求值的结果，而done是false，表示生成器函数尚未完全完成。
@@ -25,38 +28,34 @@ tags: javascript 、es6
     
     - 到达return 语句。在这种情况下，生成器的执行结束，并将IteratorResult返回给调用者，其值是由return语句指定的，并且done 为true。
 
-
-
-    ```javascript
-        // 示例：
-        function* countAppleSales () {
-            var saleList = [3, 7, 5];
-            for (var i = 0; i < saleList.length; i++) {
-                yield saleList[i];
-            }
+4. 示例
+```javascript
+    function* countAppleSales () {
+        var saleList = [3, 7, 5];
+        for (var i = 0; i < saleList.length; i++) {
+            yield saleList[i];
         }
-        var appleStore = countAppleSales(); // Generator { }
-        console.log(appleStore.next()); // { value: 3, done: false }
-        console.log(appleStore.next()); // { value: 7, done: false }
-        console.log(appleStore.next()); // { value: 5, done: false }
-        console.log(appleStore.next()); // { value: undefined, done: true }
-    ```
-
-
-
-    ##### 注意： 
-        1. 不能在forEach等方法中直接使用yield，因为forEach等接受一个函数作为参数，yield外层执行环境不是生成器函数，所以会报语法错误，错误示例如下
-    ```javascript
-        function* nameGenerator() {
-            ['Hellon','Nancy'].forEach(item => {
-                yield item  // => Uncaught SyntaxError: Unexpected identifier
-            })
-        }
-    ```
-        2. 也可作为对象属性存在，通过如下方式定义
-    ```javascript
-        *countAppleSales() {}
-    ```
+    }
+    var appleStore = countAppleSales(); // Generator { }
+    console.log(appleStore.next()); // { value: 3, done: false }
+    console.log(appleStore.next()); // { value: 7, done: false }
+    console.log(appleStore.next()); // { value: 5, done: false }
+    console.log(appleStore.next()); // { value: undefined, done: true }
+```
+    
+#### 注意： 
+1. 不能在forEach等方法中直接使用yield，因为forEach等接受一个函数作为参数，yield外层执行环境不是生成器函数，所以会报语法错误，错误示例如下
+```javascript
+    function* nameGenerator() {
+        ['Hellon','Nancy'].forEach(item => {
+            yield item  // => Uncaught SyntaxError: Unexpected identifier
+        })
+    }
+```
+2. 也可作为对象属性存在，通过如下方式定义
+```javascript
+    *countAppleSales() {}
+```
 
 3. [yield*](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/yield*) 表达式用于委托给另一个generator 或可迭代对象。
 
