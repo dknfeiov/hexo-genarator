@@ -64,7 +64,8 @@ EventBus 非父子组件间通信
 
 slot
 
-
+    slot: 标记往哪个具名插槽中插入子组件内容
+    slot-scope: 
 
 
 
@@ -72,4 +73,6 @@ slot
 
 
 1. 组件是可复用的Vue实例， Vue.component全局注册组件，可以通过普通的JS对象来定义非全局组件
+
+
 

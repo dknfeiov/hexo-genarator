@@ -12,6 +12,9 @@
 
 更简短的函数并且不绑定this。
 
+箭头函数不会创建自己的this,它只会从自己的作用域链的上一层继承this
+
+箭头函数this为父作用域的this，不是调用时的this
 
 
 Map 浏览器兼容性好
@@ -87,3 +90,11 @@ Object.keys() 方法会返回一个由一个给定对象的自身可枚举属性
 for...in
     for...in语句以任意顺序遍历一个对象的可枚举属性。对于每个不同的属性，语句都会被执行。
     循环将遍历对象本身的所有可枚举属性，以及对象从其构造函数原型中继承的属性(注意：包括原型中的可枚举属性)
+
+
+
+Shadow DOM API的 ShadowRoot接口是一个DOM子树的根节点, 它与文档的主DOM树分开渲染。
+
+ShadowRoot.mode 只读
+ShadowRoot 的模式:是 "open" 或者 "closed".
+将 ShadowRoot 的模式(mode) 设置为 "closed" 会让该 ShadowRoot 的内部实现无法被 JavaScript 访问及修改 — 也就是说将该实现不公开，例如，<video> 标签内部实现无法被 JavaScript 访问及修改。

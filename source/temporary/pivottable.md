@@ -13,3 +13,9 @@ temperature 气温、温度
     renderer 渲染器 表格、图表
     rendererOptions
     sorters 定义属性排序规则
+
+
+
+
+聚合指标
+
