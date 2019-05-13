@@ -98,3 +98,15 @@ Shadow DOM API的 ShadowRoot接口是一个DOM子树的根节点, 它与文档�
 ShadowRoot.mode 只读
 ShadowRoot 的模式:是 "open" 或者 "closed".
 将 ShadowRoot 的模式(mode) 设置为 "closed" 会让该 ShadowRoot 的内部实现无法被 JavaScript 访问及修改 — 也就是说将该实现不公开，例如，<video> 标签内部实现无法被 JavaScript 访问及修改。
+
+
+
+
+getComputedStyle
+window.ShadyCSS.getComputedStyleValue
+getPropertyValue
+getPropertyCSSValue
+getAttribute
+
+currentStyle
+style

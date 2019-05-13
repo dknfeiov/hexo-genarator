@@ -5,15 +5,15 @@ tags: Vue, WebWorker
 ---
 
 
-### 一. WebWorker介绍
+### 一. WebWorker简单介绍
 
- - Web Worker为Web内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，他们可以使用XMLHttpRequest执行 I/O。一旦创建， 一个worker 可以将消息发送到创建它的JavaScript代码, 通过将消息发布到该代码指定的事件处理程序
-
-
- - 在worker内，不能直接操作DOM节点，也不能使用window对象的默认方法和属性。然而你可以使用大量window对象之下的东西，包括WebSockets，IndexedDB
+ - Web Worker为Web内容在后台线程中运行脚本提供了一种简单的方法。线程可以发送XMLHttpRequest请求，可以执行任务而不干扰用户界面。可以通过指定的方式与创建它的JavaScript代码进行交互
 
 
- - workers和主线程间的数据传递通过这样的消息机制进行——双方都使用postMessage()方法发送各自的消息，使用onmessage事件处理函数来响应消息（消息被包含在Message事件的data属性中）。这个过程中数据并不是被共享而是被复制。
+ - 在worker内，不能直接操作DOM节点，也不能使用window对象的默认方法和属性。但可以通过self全局属性去使用WebSocket、IndexedDB等功能
+
+
+ - workers和主线程间的数据传递都通过postMessage()实现，使用onmessage事件处理函数来响应消息（消息被包含在Message事件的data属性中）。这个过程中数据并不是被共享而是被复制。
 
 
 ### 二. 配置
