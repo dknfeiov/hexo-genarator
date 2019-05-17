@@ -137,9 +137,11 @@ count()
 
 问题
 
-1. indexDB 将数据存储在硬盘，网页关闭后，数据是否随之销毁？ IndexedDB 是持久的，已经写入硬盘 
+1. indexDB 将数据存储在硬盘，网页关闭后，数据是否随之销毁？ 
+> IndexedDB 是持久的，已经写入硬盘 
 
 2. open 数据库名相同、版本增加，如何处理？
+> 触发
 
 3. blocked 事件，event 值, 如何处理
 
@@ -149,13 +151,14 @@ count()
 > attention: Chrome 48 supported
 
 6. 是否提供批量插入数据的功能，单挑插入性能方面存在不足, 耗时过久事务是否会被浏览器中断
+> indexDB 暂未提供批量插入数据的能力，只能单条插入，数据过大时，最好闲时分批处理，避免阻碍渲染，
 
-7. 数据库与后台同步时，如果不使用增量更新，需要将数据库清空再重新导入数据，如何高效的destroy  store.clear()
+7. 数据库与后台同步时，如果不使用增量更新，需要将数据库清空再重新导入数据，如何高效的destroy  
+> store.clear()
 
-
-8. openKeyCursor 支持范围么？sure [IDBKeyRange](https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange)  supported
-
-
+8. openKeyCursor 支持范围么？
+> supported [IDBKeyRange](https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange)  
+ 
 9. Chrome 支持 persistent 持久存储 indexDB么？， 默认的存储方式是什么  [storage](https://developer.mozilla.org/zh-CN/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)
 
 默认是临时存储，持久存储需要用户授权
