@@ -56,7 +56,7 @@ tags: JavaScript
     }).$mount('#app');
 ```
 
->监听 visibilitychange 事件，当页面可见状态由 prerender 变更为 visible 时，再对进行业务代码初始化。
+监听 visibilitychange 事件，当页面可见状态由 prerender 变更为 visible 时，再对进行业务代码初始化。
 ```javascript
     // main.js Vue 项目js入口
     
